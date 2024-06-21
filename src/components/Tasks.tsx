@@ -1,13 +1,13 @@
-import { useState } from "react";
-import Header from "./Header";
+import { useState } from "react"
+import Header from "./Header"
 
 const Tasks = () => {
-  const [inputValue, setInputValue] = useState("");
-  const [tasks, setTasks] = useState(["Hello world", "FSC"]);
+  const [inputValue, setInputValue] = useState("")
+  const [tasks, setTasks] = useState(["Hello world", "FSC"])
 
   const handleAddTaskClick = () => {
-    setTasks([...tasks, inputValue]);
-  };
+    setTasks([...tasks, inputValue])
+  }
 
   return (
     <div>
@@ -34,12 +34,12 @@ const Tasks = () => {
       <div>
         <ul>
           {tasks.map((task) => {
-            return <li key={task}>{task}</li>;
+            return <li key={task}>{task}</li>
           })}
         </ul>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Tasks;
+export default Tasks
