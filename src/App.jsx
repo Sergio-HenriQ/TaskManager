@@ -1,6 +1,7 @@
-import Tasks from "./components/Tasks"
+// import Tasks from "./components/Tasks"
+import Sidebar from "./components/sidebar"
 
 function App() {
-  return <Tasks />
+  return <Sidebar />
 }
 export default App
