@@ -1,42 +1,72 @@
 import { useState } from "react"
-import Header from "./Header"
+import TASKS from "../constants/tasks"
+
+import Button from "./Button"
+import TrashIcon from "../assets/icons/trash.svg?react"
+import AddIcon from "../assets/icons/Add.svg?react"
+import TasksSeparator from "./TasksSeparator"
+import SunIcon from "../assets/icons/sun.svg?react"
+import CloudSunIcon from "../assets/icons/cloud-sun.svg?react"
+import MoonIcon from "../assets/icons/moon.svg?react"
+import TaskItem from "./TaskItem"
 
 const Tasks = () => {
-  const [inputValue, setInputValue] = useState("")
-  const [tasks, setTasks] = useState(["Hello world", "FSC"])
+  const [tasks] = useState(TASKS)
 
-  const handleAddTaskClick = () => {
-    setTasks([...tasks, inputValue])
-  }
+  const morningTasks = tasks.filter((task) => task.time === "morning")
+
+  const afternoonTasks = tasks.filter((task) => task.time === "afternoon")
+
+  const eveningTasks = tasks.filter((task) => task.time === "evening")
 
   return (
-    <div>
-      <Header>
-        <h1>Add a Task</h1>
-      </Header>
+    <div className="flex w-full flex-col gap-6 px-16 py-8">
+      <div className="flex w-full justify-between">
+        <div className="flex flex-col gap-2">
+          <span className="text-xs font-semibold text-[#00ADB5]">
+            Minhas Tarefas
+          </span>
+          <h2 className="text-xl font-semibold">Minhas Tarefas</h2>
+        </div>
+        <div className="flex items-end gap-2">
+          <Button variant="ghost">
+            Limpar tarefas
+            <TrashIcon />
+          </Button>
+          <Button variant="primary">
+            Nova tarefa
+            <AddIcon />
+          </Button>
+        </div>
+      </div>
 
-      <input
-        type="text"
-        className="input"
-        placeholder="Create your task..."
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
-      />
+      <div className="flex w-full flex-col gap-6 rounded-lg bg-white p-6">
+        <div className="flex flex-col gap-3">
+          <TasksSeparator icon={<SunIcon />} title="Manhã" />
+          {morningTasks.map((task) => (
+            <TaskItem key={task.id} status={task.status}>
+              {task.description}
+            </TaskItem>
+          ))}
+        </div>
 
-      <button className="button" onClick={handleAddTaskClick}>
-        Add task
-      </button>
+        <div className="flex flex-col gap-3">
+          <TasksSeparator icon={<CloudSunIcon />} title="Tarde" />
+          {afternoonTasks.map((task) => (
+            <TaskItem key={task.id} status={task.status}>
+              {task.description}
+            </TaskItem>
+          ))}
+        </div>
 
-      <Header>
-        <h1>My Tasks</h1>
-      </Header>
-
-      <div>
-        <ul>
-          {tasks.map((task) => {
-            return <li key={task}>{task}</li>
-          })}
-        </ul>
+        <div className="flex flex-col gap-3">
+          <TasksSeparator icon={<MoonIcon />} title="Noite" />
+          {eveningTasks.map((task) => (
+            <TaskItem key={task.id} status={task.status}>
+              {task.description}
+            </TaskItem>
+          ))}
+        </div>
       </div>
     </div>
   )
