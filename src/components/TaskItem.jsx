@@ -2,7 +2,7 @@ import CheckIcon from "../assets/icons/check.svg?react"
 import LoaderIcon from "../assets/icons/loader-circle.svg?react"
 import GroupIcon from "../assets/icons/Group.svg?react"
 
-const TaskItem = ({ task }) => {
+const TaskItem = ({ task, handleTaskCheckboxClick }) => {
   const getStatusClasses = () => {
     if (task.status === "done") {
       return "bg-[#00ADB5] text-[#00ADB5]"
@@ -27,7 +27,7 @@ const TaskItem = ({ task }) => {
           <input
             type="checkbox"
             checked={task.status === "done"}
-            readOnly
+            onChange={() => handleTaskCheckboxClick(task.id)}
             className="absolute h-full w-full cursor-pointer opacity-0"
           />
           {task.status === "done" && <CheckIcon />}
