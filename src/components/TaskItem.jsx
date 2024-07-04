@@ -2,17 +2,17 @@ import CheckIcon from "../assets/icons/check.svg?react"
 import LoaderIcon from "../assets/icons/loader-circle.svg?react"
 import GroupIcon from "../assets/icons/Group.svg?react"
 
-const TaskItem = ({ status, children }) => {
+const TaskItem = ({ task }) => {
   const getStatusClasses = () => {
-    if (status === "done") {
+    if (task.status === "done") {
       return "bg-[#00ADB5] text-[#00ADB5]"
     }
 
-    if (status === "not_started") {
+    if (task.status === "not_started") {
       return "bg-[#35383E] bg-opacity-10 text-[#35383E]"
     }
 
-    if (status === "in_progress") {
+    if (task.status === "in_progress") {
       return "bg-[#FFAA04] text-[#FFAA04]"
     }
   }
@@ -26,14 +26,16 @@ const TaskItem = ({ status, children }) => {
         >
           <input
             type="checkbox"
-            checked={status === "done"}
+            checked={task.status === "done"}
             readOnly
             className="absolute h-full w-full cursor-pointer opacity-0"
           />
-          {status === "done" && <CheckIcon />}
-          {status === "in_progress" && <LoaderIcon className="animate-spin" />}
+          {task.status === "done" && <CheckIcon />}
+          {task.status === "in_progress" && (
+            <LoaderIcon className="animate-spin" />
+          )}
         </label>
-        {children}
+        {task.title}
       </div>
 
       <a href="#" className="transition hover:opacity-75">
