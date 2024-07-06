@@ -1,7 +1,8 @@
 // import Tasks from "./components/Tasks"
 import { Toaster } from "sonner"
-import Tasks from "./components/Tasks"
+
 import Sidebar from "./components/sidebar"
+import Tasks from "./components/Tasks"
 
 function App() {
   return (

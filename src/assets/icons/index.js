@@ -14,10 +14,10 @@ export {
   CheckIcon,
   CloudSunIcon,
   GroupIcon,
+  HomeIcon,
   LoaderIcon,
   MoonIcon,
   SunIcon,
-  TrashIcon,
-  HomeIcon,
   TasksIcon,
+  TrashIcon,
 }
