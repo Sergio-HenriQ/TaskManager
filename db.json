@@ -27,6 +27,13 @@
       "time": "morning",
       "description": "ssss",
       "status": "not_started"
+    },
+    {
+      "id": "cd745860-0ba5-4064-a176-f5f3809f9467",
+      "title": "Estudar FSC",
+      "time": "afternoon",
+      "description": "Ver aulas",
+      "status": "not_started"
     }
   ]
 }
