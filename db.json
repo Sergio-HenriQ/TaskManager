@@ -1,38 +1,17 @@
 {
   "tasks": [
     {
-      "id": "c12051f3-2a16-4347-9947-ce78bbba81fd",
-      "title": "teste",
-      "time": "morning",
-      "description": "teste",
-      "status": "not_started"
-    },
-    {
-      "id": "da5d8ef1-fff0-4058-a15c-72b9550da5ba",
-      "title": "teste 2",
-      "time": "morning",
-      "description": "teste 2",
-      "status": "not_started"
-    },
-    {
-      "id": "1660bf26-c579-4b8f-b312-b7de59a88adc",
-      "title": "etse",
-      "time": "morning",
-      "description": "etsss",
-      "status": "not_started"
-    },
-    {
-      "id": "aba94d97-b5df-4511-b6a7-f092e8730852",
-      "title": "ssss",
-      "time": "morning",
-      "description": "ssss",
-      "status": "not_started"
-    },
-    {
       "id": "cd745860-0ba5-4064-a176-f5f3809f9467",
       "title": "Estudar FSC",
       "time": "afternoon",
       "description": "Ver aulas",
+      "status": "not_started"
+    },
+    {
+      "id": "88542602-3495-4a1f-aa72-0203e8ebb574",
+      "title": "Ir para a academia",
+      "time": "morning",
+      "description": "Peito Supino Reto com Barra: 4x8-12 Supino Inclinado com Halteres: 3x10-12 Crucifixo Máquina: 3x12-15 Ombro Desenvolvimento Militar com Barra: 4x8-12 Elevação Lateral com Halteres: 3x12-15 Elevação Frontal com Halteres: 3x12-15",
       "status": "not_started"
     }
   ]
