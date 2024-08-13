@@ -1,18 +1,3 @@
 {
-  "tasks": [
-    {
-      "id": "cd745860-0ba5-4064-a176-f5f3809f9467",
-      "title": "Estudar FSC",
-      "time": "afternoon",
-      "description": "Ver aulas",
-      "status": "not_started"
-    },
-    {
-      "id": "88542602-3495-4a1f-aa72-0203e8ebb574",
-      "title": "Ir para a academia",
-      "time": "morning",
-      "description": "Peito Supino Reto com Barra: 4x8-12 Supino Inclinado com Halteres: 3x10-12 Crucifixo Máquina: 3x12-15 Ombro Desenvolvimento Militar com Barra: 4x8-12 Elevação Lateral com Halteres: 3x12-15 Elevação Frontal com Halteres: 3x12-15",
-      "status": "not_started"
-    }
-  ]
+  "tasks": []
 }
