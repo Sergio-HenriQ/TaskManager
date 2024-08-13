@@ -1,3 +1,11 @@
 {
-  "tasks": []
+  "tasks": [
+    {
+      "id": "f9280293-cbba-4b7a-8fee-e40d4ff1ee97",
+      "title": "Estudar FSC",
+      "time": "morning",
+      "description": "Ver aulas",
+      "status": "not_started"
+    }
+  ]
 }
