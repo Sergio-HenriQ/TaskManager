@@ -1,6 +1,6 @@
 // import Tasks from "./components/Tasks"
 
-import Sidebar from "./components/sidebar"
+import Sidebar from "./components/Sidebar"
 import Tasks from "./components/Tasks"
 
 function App() {
