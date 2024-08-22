@@ -1,25 +1,3 @@
 {
-  "tasks": [
-    {
-      "id": "aeabe7ad-e67c-4aaa-b03c-49ee61cbe0aa",
-      "title": "etste",
-      "time": "morning",
-      "description": "sssss",
-      "status": "not_started"
-    },
-    {
-      "id": "018df923-bae1-4a06-b625-bd94b47b9dd6",
-      "title": "nova tarefa",
-      "time": "evening",
-      "description": "nova",
-      "status": "not_started"
-    },
-    {
-      "id": "201260cf-3775-42f6-a8d4-d0c130b62c2f",
-      "title": "teste 1",
-      "time": "morning",
-      "description": "teste 1",
-      "status": "not_started"
-    }
-  ]
+  "tasks": []
 }

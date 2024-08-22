@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 import { HomeIcon, TasksIcon } from "../assets/icons"
 import SidebarButton from "./SidebarButton"
 
@@ -15,14 +17,18 @@ const Sidebar = () => {
       </div>
 
       <div className="flex flex-col gap-2 p-2">
-        <SidebarButton color="unselected">
-          <HomeIcon />
-          Inicio
-        </SidebarButton>
-        <SidebarButton color="selected">
-          <TasksIcon />
-          Minhas Tarefas
-        </SidebarButton>
+        <Link to={"/"}>
+          <SidebarButton color="unselected">
+            <HomeIcon />
+            Inicio
+          </SidebarButton>
+        </Link>
+        <Link to={"/tasks"}>
+          <SidebarButton color="selected">
+            <TasksIcon />
+            Minhas Tarefas
+          </SidebarButton>
+        </Link>
       </div>
     </div>
   )
