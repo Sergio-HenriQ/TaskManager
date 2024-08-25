@@ -2,11 +2,11 @@ import PropTypes from "prop-types"
 import { Link } from "react-router-dom"
 import { toast } from "sonner"
 
-import { CheckIcon, GroupIcon, LoaderIcon, TrashIcon } from "../assets/icons"
+import { CheckIcon, LoaderIcon } from "../assets/icons"
 import { useDeleteTask } from "../hooks/data/use-delete-task"
 import Button from "./Button"
 
-const TaskItem = ({ task, handleCheckboxClick }) => {
+const TaskItem = ({ task, handleCheckboxClick, TrashIcon, groupIcon }) => {
   const { mutate: deleteTask, isPending } = useDeleteTask(task.id)
 
   const handleDeleteClick = async () => {
@@ -60,12 +60,12 @@ const TaskItem = ({ task, handleCheckboxClick }) => {
           {isPending ? (
             <LoaderIcon className="animate-spin text-brand-text-gray" />
           ) : (
-            <TrashIcon className="text-brand-text-gray" />
+            <div className="text-brand-text-gray">{TrashIcon}</div>
           )}
         </Button>
 
         <Link to={`/task/${task.id}`} className="transition hover:opacity-75">
-          <GroupIcon />
+          {groupIcon}
         </Link>
       </div>
     </div>

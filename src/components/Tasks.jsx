@@ -1,7 +1,13 @@
 import { useQueryClient } from "@tanstack/react-query"
 import { toast } from "sonner"
 
-import { CloudSunIcon, MoonIcon, SunIcon } from "../assets/icons"
+import {
+  CloudSunIcon,
+  GroupIcon,
+  MoonIcon,
+  SunIcon,
+  TrashIcon,
+} from "../assets/icons"
 import { useGetTasks } from "../hooks/data/use-get-tasks"
 import Header from "./Header"
 import TaskItem from "./TaskItem"
@@ -60,6 +66,8 @@ const Tasks = () => {
               key={task.id}
               task={task}
               handleCheckboxClick={handleTaskCheckboxClick}
+              TrashIcon={<TrashIcon />}
+              groupIcon={<GroupIcon />}
             />
           ))}
         </div>
@@ -76,6 +84,8 @@ const Tasks = () => {
               key={task.id}
               task={task}
               handleCheckboxClick={handleTaskCheckboxClick}
+              TrashIcon={<TrashIcon />}
+              groupIcon={<GroupIcon />}
             />
           ))}
         </div>
@@ -93,6 +103,8 @@ const Tasks = () => {
               key={task.id}
               task={task}
               handleCheckboxClick={handleTaskCheckboxClick}
+              TrashIcon={<TrashIcon />}
+              groupIcon={<GroupIcon />}
             />
           ))}
         </div>
