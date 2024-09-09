@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useQueryClient } from "@tanstack/react-query"
 
 import {
   GlassWaterIcon,
@@ -11,14 +11,29 @@ import Header from "../components/Header"
 import Sidebar from "../components/Sidebar"
 import SummaryOfTasks from "../components/SummaryOfTasks"
 import TasksInfo from "../components/TasksInfo"
-import { TasksContext } from "../contexts/tasks.context"
+import { calculateTotalWaterConsumption } from "../helpers/calculateTotalWaterConsumption"
+import { changeTaskStatus } from "../helpers/changeTaskStatus"
+import { useGetTasks } from "../hooks/data/use-get-tasks"
+import { useGetWaterConsumption } from "../hooks/data/use-get-water-consumption"
 
 const HomePage = () => {
-  const { tasks, amountOfWaterConsumed, dailyWaterConsumption } =
-    useContext(TasksContext)
+  const queryClient = useQueryClient()
+  const { data: tasks } = useGetTasks()
+
+  const { data: waterConsumption } = useGetWaterConsumption()
+
+  let amountOfWaterConsumed
+
+  if (waterConsumption?.length > 0) {
+    amountOfWaterConsumed = calculateTotalWaterConsumption(waterConsumption)
+  }
 
   const completedTasks = tasks?.filter((task) => task.status === "done")
   const tasksInProgress = tasks?.filter((task) => task.status === "in_progress")
+
+  const handleTaskCheckboxClick = (taskId) => {
+    changeTaskStatus(taskId, waterConsumption, queryClient, "waterConsumption")
+  }
 
   return (
     <div className="flex">
@@ -51,8 +66,9 @@ const HomePage = () => {
         <div className="flex w-full justify-between gap-8">
           <SummaryOfTasks tasks={tasks} />
           <DailyWaterTarget
-            dailyTarget={dailyWaterConsumption}
+            dailyTarget={waterConsumption}
             proguess={amountOfWaterConsumed}
+            handleTaskCheckboxClick={handleTaskCheckboxClick}
           />
         </div>
       </div>
