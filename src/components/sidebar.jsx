@@ -1,9 +1,13 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 import { HomeIcon, TasksIcon } from "../assets/icons"
 import SidebarButton from "./SidebarButton"
 
 const Sidebar = () => {
+  const activeLink =
+    " rounded-lg bg-brand-primary bg-opacity-15 text-brand-primary"
+  const unselected = "text-brand-dark-blue"
+
   return (
     <div className="h-screen w-72 bg-white">
       <div className="space-y-4 px-8 py-6">
@@ -17,18 +21,24 @@ const Sidebar = () => {
       </div>
 
       <div className="flex flex-col gap-2 p-2">
-        <Link to={"/"}>
-          <SidebarButton color="unselected">
+        <NavLink
+          to={"/"}
+          className={({ isActive }) => (isActive ? activeLink : unselected)}
+        >
+          <SidebarButton>
             <HomeIcon />
             Inicio
           </SidebarButton>
-        </Link>
-        <Link to={"/tasks"}>
-          <SidebarButton color="selected">
+        </NavLink>
+        <NavLink
+          to={"/tasks"}
+          className={({ isActive }) => (isActive ? activeLink : unselected)}
+        >
+          <SidebarButton>
             <TasksIcon />
             Minhas Tarefas
           </SidebarButton>
-        </Link>
+        </NavLink>
       </div>
     </div>
   )
