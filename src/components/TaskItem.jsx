@@ -76,8 +76,8 @@ TaskItem.propTypes = {
   task: PropTypes.shape({
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    time: PropTypes.oneOf(["morning", "afternoon", "evening"]).isRequired,
+    description: PropTypes.string,
+    time: PropTypes.oneOf(["morning", "afternoon", "evening"]),
     status: PropTypes.oneOf(["done", "in_progress", "not_started"]).isRequired,
   }).isRequired,
   handleCheckboxClick: PropTypes.func.isRequired,

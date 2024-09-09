@@ -1,5 +1,4 @@
 import { useQueryClient } from "@tanstack/react-query"
-import { toast } from "sonner"
 
 import {
   CloudSunIcon,
@@ -8,6 +7,7 @@ import {
   SunIcon,
   TrashIcon,
 } from "../assets/icons"
+import { changeTaskStatus } from "../helpers/changeTaskStatus"
 import { useGetTasks } from "../hooks/data/use-get-tasks"
 import Header from "./Header"
 import TaskItem from "./TaskItem"
@@ -24,29 +24,7 @@ const Tasks = () => {
   const eveningTasks = tasks?.filter((task) => task.time === "evening")
 
   const handleTaskCheckboxClick = (taskId) => {
-    const newTasks = tasks.map((task) => {
-      if (task.id != taskId) {
-        return task
-      }
-
-      if (task.status === "not_started") {
-        toast.success("Tarefa iniciada com sucesso!")
-        return { ...task, status: "in_progress" }
-      }
-
-      if (task.status === "in_progress") {
-        toast.success("Tarefa concluida com sucesso!")
-        return { ...task, status: "done" }
-      }
-
-      if (task.status === "done") {
-        toast.success("Tarefa reiniciada com sucesso!")
-        return { ...task, status: "not_started" }
-      }
-
-      return task
-    })
-    queryClient.setQueryData("tasks", newTasks)
+    changeTaskStatus(taskId, tasks, queryClient, "tasks")
   }
 
   return (
