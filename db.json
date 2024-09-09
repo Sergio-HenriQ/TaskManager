@@ -1,24 +1,61 @@
 {
   "tasks": [
     {
-      "id": "f680a4d6-c97c-4a1c-8c55-b3a4b3d571e0",
-      "title": "teste",
-      "time": "morning",
-      "description": "teste",
-      "status": "done"
+      "id": "5e39b64e-3af2-4572-809b-ba69326ed3fc",
+      "title": "Estudar",
+      "time": "evening",
+      "description": "Estudar FullStackClub",
+      "status": "not_started"
     },
     {
-      "id": "00fc8a77-96f2-4dc3-a6eb-bf0f05115757",
+      "id": "568b0af0-392d-4a9f-a7c2-3e0f105a14ac",
       "title": "teste 2",
       "time": "morning",
       "description": "teste 2",
-      "status": "in_progress"
+      "status": "not_started"
     },
     {
-      "id": "52124b33-acf3-47d2-98e9-0b86f29d7828",
-      "title": "testando",
-      "time": "morning",
-      "description": "testando",
+      "id": "3fc9e4c6-ff0f-4de3-9878-2d2c2949d21d",
+      "title": "Beber agua",
+      "time": "evening",
+      "description": "1 Litro",
+      "status": "not_started"
+    }
+  ],
+  "dailyWaterConsumption": [
+    {
+      "id": "1",
+      "title": "500 ml",
+      "quantity": 500,
+      "percentage": 20,
+      "status": "not_started"
+    },
+    {
+      "id": "2",
+      "title": "1 litro",
+      "quantity": 1000,
+      "percentage": 40,
+      "status": "not_started"
+    },
+    {
+      "id": "3",
+      "title": "1,5 litros",
+      "quantity": 1500,
+      "percentage": 60,
+      "status": "not_started"
+    },
+    {
+      "id": "4",
+      "title": "2 litros",
+      "quantity": 2000,
+      "percentage": 80,
+      "status": "not_started"
+    },
+    {
+      "id": "5",
+      "title": "2,5 litros",
+      "quantity": 2500,
+      "percentage": 100,
       "status": "not_started"
     }
   ]
