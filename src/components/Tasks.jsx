@@ -8,6 +8,7 @@ import {
   TrashIcon,
 } from "../assets/icons"
 import { changeTaskStatus } from "../helpers/changeTaskStatus"
+import { updateTaskStatus } from "../helpers/updateTaskStatus"
 import { useGetTasks } from "../hooks/data/use-get-tasks"
 import Header from "./Header"
 import TaskItem from "./TaskItem"
@@ -23,8 +24,11 @@ const Tasks = () => {
 
   const eveningTasks = tasks?.filter((task) => task.time === "evening")
 
-  const handleTaskCheckboxClick = (taskId) => {
+  const allStatus = ["not_started", "in_progress", "done"]
+
+  const handleTaskCheckboxClick = (taskId, task) => {
     changeTaskStatus(taskId, tasks, queryClient, "tasks")
+    updateTaskStatus(taskId, task, allStatus, "tasks")
   }
 
   return (

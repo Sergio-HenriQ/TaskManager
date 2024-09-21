@@ -13,6 +13,7 @@ import SummaryOfTasks from "../components/SummaryOfTasks"
 import TasksInfo from "../components/TasksInfo"
 import { calculateTotalWaterConsumption } from "../helpers/calculateTotalWaterConsumption"
 import { changeTaskStatus } from "../helpers/changeTaskStatus"
+import { updateTaskStatus } from "../helpers/updateTaskStatus"
 import { useGetTasks } from "../hooks/data/use-get-tasks"
 import { useGetWaterConsumption } from "../hooks/data/use-get-water-consumption"
 
@@ -31,8 +32,11 @@ const HomePage = () => {
   const completedTasks = tasks?.filter((task) => task.status === "done")
   const tasksInProgress = tasks?.filter((task) => task.status === "in_progress")
 
-  const handleTaskCheckboxClick = (taskId) => {
+  const allStatus = ["not_started", "in_progress", "done"]
+
+  const handleTaskCheckboxClick = (taskId, task) => {
     changeTaskStatus(taskId, waterConsumption, queryClient, "waterConsumption")
+    updateTaskStatus(taskId, task, allStatus, "dailyWaterConsumption")
   }
 
   return (

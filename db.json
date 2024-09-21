@@ -1,34 +1,12 @@
 {
-  "tasks": [
-    {
-      "id": "5e39b64e-3af2-4572-809b-ba69326ed3fc",
-      "title": "Estudar",
-      "time": "evening",
-      "description": "Estudar FullStackClub",
-      "status": "not_started"
-    },
-    {
-      "id": "568b0af0-392d-4a9f-a7c2-3e0f105a14ac",
-      "title": "teste 2",
-      "time": "morning",
-      "description": "teste 2",
-      "status": "not_started"
-    },
-    {
-      "id": "3fc9e4c6-ff0f-4de3-9878-2d2c2949d21d",
-      "title": "Beber agua",
-      "time": "evening",
-      "description": "1 Litro",
-      "status": "not_started"
-    }
-  ],
+  "tasks": [],
   "dailyWaterConsumption": [
     {
       "id": "1",
       "title": "500 ml",
       "quantity": 500,
       "percentage": 20,
-      "status": "not_started"
+      "status": "done"
     },
     {
       "id": "2",

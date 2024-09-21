@@ -44,7 +44,7 @@ const TaskItem = ({ task, handleCheckboxClick, TrashIcon, groupIcon }) => {
           <input
             type="checkbox"
             checked={task.status === "done"}
-            onChange={() => handleCheckboxClick(task.id)}
+            onChange={() => handleCheckboxClick(task.id, task)}
             className="absolute h-full w-full cursor-pointer opacity-0"
           />
           {task.status === "done" && <CheckIcon />}
@@ -80,7 +80,6 @@ TaskItem.propTypes = {
     time: PropTypes.oneOf(["morning", "afternoon", "evening"]),
     status: PropTypes.oneOf(["done", "in_progress", "not_started"]).isRequired,
   }).isRequired,
-  handleCheckboxClick: PropTypes.func.isRequired,
 }
 
 export default TaskItem
