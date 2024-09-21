@@ -1,16 +1,7 @@
-import { useQueryClient } from "@tanstack/react-query"
-
 import { GroupIcon } from "../assets/icons"
-import { changeTaskStatus } from "../helpers/changeTaskStatus"
 import TaskItem from "./TaskItem"
 
 const SummaryOfTasks = ({ tasks }) => {
-  const queryClient = useQueryClient()
-
-  const handleTaskCheckboxClick = (taskId) => {
-    changeTaskStatus(taskId, tasks, queryClient, "tasks")
-  }
-
   return (
     <div className="flex w-full flex-col gap-6 rounded-xl bg-brand-white p-6">
       {/* Titulos */}
@@ -22,13 +13,8 @@ const SummaryOfTasks = ({ tasks }) => {
       </div>
 
       <div className="flex flex-col gap-3">
-        {tasks?.map((task) => (
-          <TaskItem
-            key={task.id}
-            task={task}
-            groupIcon={<GroupIcon />}
-            handleCheckboxClick={handleTaskCheckboxClick}
-          />
+        {tasks?.slice(0, 5)?.map((task) => (
+          <TaskItem key={task.id} task={task} groupIcon={<GroupIcon />} />
         ))}
       </div>
     </div>
