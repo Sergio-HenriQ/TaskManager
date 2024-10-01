@@ -8,11 +8,11 @@ import { CSSTransition } from "react-transition-group"
 import { toast } from "sonner"
 import { v4 } from "uuid"
 
-import { LoaderIcon } from "../assets/icons"
-import { useAddTask } from "../hooks/data/use-add-task"
-import Button from "./Button"
-import Input from "./Input"
-import TimeSelect from "./TimeSelect"
+import { LoaderIcon } from "../../assets/icons"
+import { useAddTask } from "../../hooks/data/use-add-task"
+import Button from "../Button/Button"
+import Input from "../Input/Input"
+import TimeSelect from "../TimeSelect"
 
 const AddTaskDialog = ({ isOpen, handleClose }) => {
   const {
