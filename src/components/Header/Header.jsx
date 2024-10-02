@@ -3,11 +3,11 @@ import PropTypes from "prop-types"
 import { useState } from "react"
 import { toast } from "sonner"
 
-import { AddIcon, TrashIcon } from "../assets/icons"
-import { deleteAllTasks } from "../hooks/data/use-delete-tasks"
-import { useGetTasks } from "../hooks/data/use-get-tasks"
-import AddTaskDialog from "./AddTaskDialog"
-import Button from "./Button"
+import { AddIcon, TrashIcon } from "../../assets/icons"
+import { deleteAllTasks } from "../../hooks/data/use-delete-tasks"
+import { useGetTasks } from "../../hooks/data/use-get-tasks"
+import AddTaskDialog from "../AddTaskDialog/AddTaskDialog"
+import Button from "../Button/Button"
 
 const Header = ({ children }) => {
   const [addTaskDialogIsOpen, setAddTaskDialogIsOpen] = useState(false)
