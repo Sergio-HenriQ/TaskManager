@@ -10,7 +10,7 @@ import {
 import { changeTaskStatus } from "../helpers/changeTaskStatus"
 import { updateTaskStatus } from "../helpers/updateTaskStatus"
 import { useGetTasks } from "../hooks/data/use-get-tasks"
-import Header from "./Header"
+import Header from "./Header/Header"
 import TaskItem from "./TaskItem"
 import TasksSeparator from "./TasksSeparator"
 

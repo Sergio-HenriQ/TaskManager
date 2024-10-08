@@ -8,10 +8,10 @@ import {
   LoaderIcon,
   TrashIcon,
 } from "../assets/icons"
-import Button from "../components/Button"
-import Input from "../components/Input"
+import Button from "../components/Button/Button"
+import Input from "../components/Input/Input"
 import Sidebar from "../components/Sidebar"
-import TimeSelect from "../components/TimeSelect"
+import TimeSelect from "../components/TimeSelect/TimeSelect"
 import { useDeleteTask } from "../hooks/data/use-delete-task"
 import { useGetTask } from "../hooks/data/use-get-task"
 import { useUpdateTask } from "../hooks/data/use-update-task"

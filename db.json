@@ -1,5 +1,13 @@
 {
-  "tasks": [],
+  "tasks": [
+    {
+      "id": "014ee046-31a8-4e28-a6b6-771407165b20",
+      "title": "teste",
+      "time": "afternoon",
+      "description": "teste",
+      "status": "in_progress"
+    }
+  ],
   "dailyWaterConsumption": [
     {
       "id": "1",
@@ -13,7 +21,7 @@
       "title": "1 litro",
       "quantity": 1000,
       "percentage": 40,
-      "status": "not_started"
+      "status": "in_progress"
     },
     {
       "id": "3",

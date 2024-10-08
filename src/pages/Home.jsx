@@ -6,11 +6,11 @@ import {
   LoaderIcon,
   TasksIcon,
 } from "../assets/icons"
-import DailyWaterTarget from "../components/DailyWaterTarget"
-import Header from "../components/Header"
+import DailyWaterTarget from "../components/DailyWaterTarget/DailyWaterTarget"
+import Header from "../components/Header/Header"
 import Sidebar from "../components/Sidebar"
 import SummaryOfTasks from "../components/SummaryOfTasks"
-import TasksInfo from "../components/TasksInfo"
+import TasksInfo from "../components/TasksInfo/TasksInfo"
 import { calculateTotalWaterConsumption } from "../helpers/calculateTotalWaterConsumption"
 import { changeTaskStatus } from "../helpers/changeTaskStatus"
 import { updateTaskStatus } from "../helpers/updateTaskStatus"

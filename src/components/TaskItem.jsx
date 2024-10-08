@@ -4,7 +4,7 @@ import { toast } from "sonner"
 
 import { CheckIcon, LoaderIcon } from "../assets/icons"
 import { useDeleteTask } from "../hooks/data/use-delete-task"
-import Button from "./Button"
+import Button from "./Button/Button"
 
 const TaskItem = ({ task, handleCheckboxClick, TrashIcon, groupIcon }) => {
   const { mutate: deleteTask, isPending } = useDeleteTask(task.id)

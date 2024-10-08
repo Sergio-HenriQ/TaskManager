@@ -12,7 +12,7 @@ import { LoaderIcon } from "../../assets/icons"
 import { useAddTask } from "../../hooks/data/use-add-task"
 import Button from "../Button/Button"
 import Input from "../Input/Input"
-import TimeSelect from "../TimeSelect"
+import TimeSelect from "../TimeSelect/TimeSelect"
 
 const AddTaskDialog = ({ isOpen, handleClose }) => {
   const {
