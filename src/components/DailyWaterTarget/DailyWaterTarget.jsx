@@ -1,5 +1,5 @@
-import { SquarePenIcon } from "../assets/icons"
-import TaskItem from "./TaskItem"
+import { SquarePenIcon } from "../../assets/icons"
+import TaskItem from "../TaskItem"
 
 const DailyWaterTarget = ({
   dailyTarget,
